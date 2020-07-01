@@ -1,4 +1,4 @@
-# vim-info
+# vim-pro
 
 ## License
 
