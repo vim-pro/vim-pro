@@ -120,3 +120,9 @@ nmap <leader>e :Files<cr>
 nmap <leader>b :Buffers<cr>
 nmap <leader>f :Ag<cr>
 nmap <leader>* :Ag <c-r><c-w><cr>
+
+" use ctrl-s for split as it's less awkward to strike
+let g:fzf_action = {
+            \ 'ctrl-t': 'tab split',
+            \ 'ctrl-s': 'split',
+            \ 'ctrl-v': 'vsplit' }
