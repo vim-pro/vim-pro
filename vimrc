@@ -20,6 +20,7 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'reedes/vim-wheel'
+Plug 'tpope/vim-commentary'
 " themes
 Plug 'chriskempson/base16-vim'
 " provide some level of support for a large
@@ -126,3 +127,11 @@ let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
             \ 'ctrl-s': 'split',
             \ 'ctrl-v': 'vsplit' }
+
+"
+" Commentary
+"
+
+" leader access to comment toggle
+nmap <leader>c :Commentary<cr>
+vmap <leader>c :Commentary<cr>
