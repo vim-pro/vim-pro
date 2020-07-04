@@ -1,60 +1,15 @@
 "
-" Plugin management using vim-plug
+" Settings
 "
 
-" Install vim-plug if it is not installed
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+so settings/plugins.vim       " plugins and their configurations
+so settings/general.vim       " mouse, leader, etc.
+so settings/appearance.vim    " theme
+so settings/editing.vim       " text editing
+so settings/bindings.vim      " quick access to navigation, editing
 
 "
-" Plugins list
-"
-
-call plug#begin()
-" common defaults
-Plug 'tpope/vim-sensible'
-" fuzzy finding
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'reedes/vim-wheel'
-Plug 'tpope/vim-commentary'
-" themes
-Plug 'chriskempson/base16-vim'
-" provide some level of support for a large
-" variety of languages
-Plug 'sheerun/vim-polyglot'
-" additional filetype support
-Plug 'bfontaine/Brewfile.vim'
-call plug#end()
-
-"
-" Theme
-"
-
-if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-endif
-
-"
-" Mouse (get over it)
-"
-
-" enable in all modes
-set mouse=a
-
-"
-" Leader key
-"
-" The benefit of using spacebar as the leader key is that the
-" leader key can be quickly struck by either hand
-let mapleader=" " 
-
-"
-" Quick access remaps of native commands
+" Settings related
 "
 
 " open settings
@@ -63,78 +18,3 @@ nmap <leader>, :e $MYVIMRC<cr>
 " reload vimrc
 nmap <leader>s :so $MYVIMRC<cr>
 
-" since ; is remapped above, make it available as ;;
-noremap ;; ;
-" start typing a colon command by pressing ; instead of ⇧;
-nmap ; :
-
-" start typing a shell command by pressing 1 instead of press ⇧;1
-nmap 1 :!
-
-" toggle between the current buffer and the previous buffer
-nmap <leader><leader> :b#<cr>
-
-" write, write+quit, and quit
-nmap <leader>w :w<cr>
-nmap <leader>x :x<cr>
-nmap <leader>q :q<cr>
-
-" toggle line numbers
-nmap <leader>n :set number!<cr>
-
-" make only the current visible
-nmap <leader>o :only<cr>
-
-" sort visually selected lines
-vnoremap <leader>s :sort<cr>
-
-"
-" Settings
-"
-
-set noswapfile
-
-" show tabs as 4 spaces
-set tabstop=4
-" > indent with 4 spaces
-set shiftwidth=4
-" tab indent with 4 spaces
-set expandtab
-
-" show line numbers
-set number
-
-" use the osx clipboard so you can copy/paste to/from other apps
-" - in order to copy from vim to system clipboard, use y in normal mode
-" - in order to paste from system clipboard to vim, use p in normal mode
-set clipboard=unnamed
-
-"
-" Plugin Configurations
-"
-
-" FZF
-
-" use silver searcher for things like gitignore exclusions
-" https://github.com/junegunn/fzf.vim/issues/121#issuecomment-209534405
-let $FZF_DEFAULT_COMMAND='ag -g ""'
-
-" quick access to files, buffers, and searching
-nmap <leader>e :Files<cr>
-nmap <leader>b :Buffers<cr>
-nmap <leader>f :Ag<cr>
-nmap <leader>* :Ag <c-r><c-w><cr>
-
-" use ctrl-s for split as it's less awkward to strike
-let g:fzf_action = {
-            \ 'ctrl-t': 'tab split',
-            \ 'ctrl-s': 'split',
-            \ 'ctrl-v': 'vsplit' }
-
-"
-" Commentary
-"
-
-" leader access to comment toggle
-nmap <leader>c :Commentary<cr>
-vmap <leader>c :Commentary<cr>
