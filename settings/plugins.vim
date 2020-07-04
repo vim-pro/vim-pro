@@ -6,7 +6,7 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    autocmd VimEnter * PlugInstall --sync | so $MYVIMRC
 endif
 
 "
@@ -34,5 +34,5 @@ call plug#end()
 " Plugin configurations
 "
 
-source settings/plugins/fzf.vim
-source settings/plugins/commentary.vim
+so settings/plugins/fzf.vim
+so settings/plugins/commentary.vim
