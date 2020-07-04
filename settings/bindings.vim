@@ -19,6 +19,12 @@ nmap <leader>sb :so %<cr>
 " Navigation
 "
 
+" quick access to files, buffers, and searching
+nmap <leader>e :Files<cr>
+nmap <leader>b :Buffers<cr>
+nmap <leader>f :Ag<cr>
+nmap <leader>* :Ag <c-r><c-w><cr>
+
 " toggle between the current buffer and the previous buffer
 nmap <leader><leader> :b#<cr>
 
@@ -26,7 +32,7 @@ nmap <leader><leader> :b#<cr>
 nmap <leader>o :only<cr>
 
 "
-" Text Editing
+" General Text Editing
 "
 
 " write, write+quit, and quit
@@ -39,6 +45,14 @@ nmap <leader>n :set number!<cr>
 
 " sort visually selected lines
 vnoremap <leader>s :sort<cr>
+
+"
+" Code Editing
+"
+
+" leader access to comment toggle
+nmap <leader>c :Commentary<cr>
+vmap <leader>c :Commentary<cr>
 
 "
 " Advanced
