@@ -101,6 +101,9 @@ set shiftwidth=4
 " tab indent with 4 spaces
 set expandtab
 
+" show line numbers
+set number
+
 " use the osx clipboard so you can copy/paste to/from other apps
 " - in order to copy from vim to system clipboard, use y in normal mode
 " - in order to paste from system clipboard to vim, use p in normal mode
