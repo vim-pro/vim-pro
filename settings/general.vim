@@ -3,11 +3,10 @@
 "
 
 "
-" Mouse (get over it)
+" Mouse
 "
 
-" enable in all modes
-set mouse=a
+set mouse=a                  " enable mouse in all modes
  
 "
 " Leader key

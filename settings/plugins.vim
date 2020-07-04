@@ -14,25 +14,23 @@ endif
 "
 
 call plug#begin()
-" common defaults
-Plug 'tpope/vim-sensible'
-" fuzzy finding
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'tpope/vim-sensible'                        " common defaults
+Plug 'junegunn/fzf',                             " fuzzy finding
+            \ { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'reedes/vim-wheel'
-Plug 'tpope/vim-commentary'
-" themes
-Plug 'chriskempson/base16-vim'
-" provide some level of support for a large
-" variety of languages
-Plug 'sheerun/vim-polyglot'
+Plug 'reedes/vim-wheel'                          " in-place cursor scroll
+Plug 'tpope/vim-commentary'                      " code comments
+Plug 'chriskempson/base16-vim'                   " themes
+Plug 'sheerun/vim-polyglot'                      " variety language pack
+"
 " additional filetype support
-Plug 'bfontaine/Brewfile.vim'
+"
+Plug 'bfontaine/Brewfile.vim'                    " homebrew
 call plug#end()
 
 "
 " Plugin configurations
 "
 
-so settings/plugins/fzf.vim
-so settings/plugins/commentary.vim
+so $HOME/.vim/settings/plugins/fzf.vim
+so $HOME/.vim/settings/plugins/commentary.vim

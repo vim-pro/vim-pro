@@ -3,6 +3,19 @@
 "
 
 "
+" Settings
+"
+
+" open settings
+nmap <leader>, :e $MYVIMRC<cr>
+
+" reload settings
+nmap <leader>s :so $MYVIMRC<cr>
+
+" reload buffer
+nmap <leader>sb :so %<cr>
+
+"
 " Navigation
 "
 
