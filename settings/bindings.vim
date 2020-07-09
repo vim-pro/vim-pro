@@ -8,12 +8,21 @@
 
 " open settings
 nmap <leader>, :e $MYVIMRC<cr>
-
 " reload settings
-nmap <leader>s :so $MYVIMRC<cr>
-
+nmap <leader>,r :so $MYVIMRC<cr>
 " reload buffer
-nmap <leader>sb :so %<cr>
+nmap <leader>,rr :so %<cr>
+
+" jump to general settings
+nmap <leader>,g :e $HOME/.vim/settings/general.vim<cr>
+" jump to plugins settings
+nmap <leader>,p :e $HOME/.vim/settings/plugins.vim<cr>
+" jump to appearance settings
+nmap <leader>,a :e $HOME/.vim/settings/appearance.vim<cr>
+" jump to editing settings
+nmap <leader>,e :e $HOME/.vim/settings/editing.vim<cr>
+" jump to bindings settings
+nmap <leader>,b :e $HOME/.vim/settings/bindings.vim<cr>
 
 "
 " Navigation
