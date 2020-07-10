@@ -7,11 +7,11 @@
 "
 
 " open settings
-nmap <leader>, :e $MYVIMRC<cr>
+nmap <leader>,, :e $MYVIMRC<cr>
 " reload settings
 nmap <leader>,r :so $MYVIMRC<cr>
 " reload buffer
-nmap <leader>,rr :so %<cr>
+nmap <leader>,l :so %<cr>
 
 " jump to general settings
 nmap <leader>,g :e $HOME/.vim/settings/general.vim<cr>
