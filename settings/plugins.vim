@@ -26,6 +26,14 @@ Plug 'sheerun/vim-polyglot'                      " variety language pack
 " additional filetype support
 "
 Plug 'bfontaine/Brewfile.vim'                    " homebrew
+"
+" language server
+"
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 "

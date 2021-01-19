@@ -64,6 +64,16 @@ nmap <leader>c :Commentary<cr>
 vmap <leader>c :Commentary<cr>
 
 "
+" Language Server
+"
+nmap <leader>ld :LspDefinition<cr>
+nmap <leader>lf :LspDocumentFormat<cr>
+nmap <leader>lh :LspHover<cr>
+nmap <leader>lp :LspPeekDefinition<cr>
+nmap <leader>lr :LspRename<cr>
+nmap <leader>ls :LspDocumentSymbol<cr>
+
+"
 " Advanced
 "
 
