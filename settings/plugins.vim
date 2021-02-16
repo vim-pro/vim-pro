@@ -22,6 +22,8 @@ Plug 'reedes/vim-wheel'                          " in-place cursor scroll
 Plug 'tpope/vim-commentary'                      " code comments
 Plug 'chriskempson/base16-vim'                   " themes
 Plug 'sheerun/vim-polyglot'                      " variety language pack
+Plug 'tpope/vim-vinegar'                         " filebrowser
+Plug 'vim-test/vim-test'                         " test running
 "
 " additional filetype support
 "

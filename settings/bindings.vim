@@ -72,6 +72,16 @@ nmap <leader>lh :LspHover<cr>
 nmap <leader>lp :LspPeekDefinition<cr>
 nmap <leader>lr :LspRename<cr>
 nmap <leader>ls :LspDocumentSymbol<cr>
+nmap <leader>l/ :LspDocumentDiagnostics<cr>
+
+"
+" Test Running
+"
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
 
 "
 " Advanced
